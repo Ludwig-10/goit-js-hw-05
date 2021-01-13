@@ -15,13 +15,14 @@ class Storage {
     removeItem(removedItem) {
         const newItems = [];
         for (const item of this.items) {
-        if (item === removedItem) continue;
+        if (item !== removedItem){
         newItems.push(item);
         }
+    }
         this.items = newItems;
+    
     }
-    }
-
+}
 const storage = new Storage([
     'Нанитоиды',
     'Пролонгер',
